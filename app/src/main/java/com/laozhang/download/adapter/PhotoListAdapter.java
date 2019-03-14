@@ -2,7 +2,9 @@ package com.laozhang.download.adapter;
 
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.v7.recyclerview.extensions.ListAdapter;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +20,13 @@ public class PhotoListAdapter extends RecyclerView.Adapter<PhotoListAdapter.View
 
     private List<Uri> uris;
 
-    public void addPhoto(Uri uri){
-        if(uris == null) uris = new ArrayList<>();
-        uris.add(uri);
-        notifyItemInserted(uris.size()-1);
+    public PhotoListAdapter() {
+        uris = new ArrayList<>();
+    }
+
+    public void submitList(List<Uri> uris){
+        this.uris = uris;
+        notifyDataSetChanged();
     }
 
     @NonNull

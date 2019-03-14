@@ -14,8 +14,8 @@ public class MainViewModel extends ViewModel {
     private UriRepository uriRepository;
     private MutableLiveData<List<Uri>> mUris;
 
-    public MainViewModel(UriRepository uriRepository){
-        this.uriRepository = uriRepository;
+    public MainViewModel(){
+        uriRepository = new UriRepository();
         mUris = new MutableLiveData<>();
     }
 
