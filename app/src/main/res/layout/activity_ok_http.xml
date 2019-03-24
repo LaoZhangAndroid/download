@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OkHttpActivity">
+
+    <Button
+        android:id="@+id/button1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="synchronizedGet"
+        android:text="同步get请求"/>
+
+    <Button
+        android:id="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="asynchronizedGet"
+        android:text="异步get请求"/>
+
+    <Button
+        android:id="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="headerTest"
+        android:text="header"/>
+
+    <Button
+        android:id="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cacheGet"
+        android:text="cache get"/>
+
+
+</android.support.constraint.ConstraintLayout>
