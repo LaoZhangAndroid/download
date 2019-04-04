@@ -193,4 +193,18 @@ public class DoubanRepository {
     }
 
 
+    private void create(){
+        RequestBody requestBody = new RequestBody() {
+            @Override
+            public MediaType contentType() {
+                return null;
+            }
+
+            @Override
+            public void writeTo(BufferedSink sink) throws IOException {
+
+            }
+        };
+    }
+
 }
